@@ -28,17 +28,29 @@ Impostiamo una password per l’utente root
 
 ```sql
 
+    SELECT *
+    FROM courses
+    WHERE courses.cfu > "10";
+
 ```
 
 ### 3. Selezionare tutti gli studenti che hanno più di 30 anni
 
 ```sql
 
+    SELECT *, YEAR(students.date_of_birth)
+    FROM students
+    where year(students.date_of_birth) = 1996
+
 ```
 
 ### 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
 
 ```sql
+
+    SELECT *
+    FROM courses
+    WHERE courses.period = "I semestre" AND  courses.year = 1
 
 ```
 
