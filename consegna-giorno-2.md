@@ -49,6 +49,11 @@ Impostiamo una password per l’utente root
     SELECT *, TIMESTAMPDIFF(YEAR,students.date_of_birth, CURDATE())
     FROM students
     WHERE TIMESTAMPDIFF(YEAR, students.date_of_birth, CURDATE()) > 30
+    -----------------------------------------------
+    SELECT *, DATE_SUB(CURDATE(), INTERVAL 30 YEAR)
+    FROM students
+    WHERE students.date_of_birth < DATE_SUB(CURDATE(), INTERVAL 30 YEAR)
+    ORDER BY date_of_birth DESC
 
 ```
 
