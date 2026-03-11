@@ -84,6 +84,9 @@ Impostiamo una password per l’utente root
 
 ```sql
 
+    SELECT COUNT(*)
+    FROM departments
+
 ```
 
 ### 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
