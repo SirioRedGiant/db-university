@@ -58,6 +58,15 @@ Impostiamo una password per l’utente root
 
 ```sql
 
+    SELECT *
+    FROM exams
+    WHERE exams.hour >= "14:00:00" AND exams.date = "2020-06-20"
+    ----
+    SELECT *, HOUR(exams.hour)
+    FROM exams
+    WHERE HOUR(exams.hour) >= 14 AND exams.date = "2020-06-20";
+
+
 ```
 
 ### 6. Selezionare tutti i corsi di laurea magistrale (38)
