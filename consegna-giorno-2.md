@@ -21,6 +21,10 @@ Impostiamo una password per l’utente root
 
     SELECT * FROM `db-university`.students
     WHERE students.date_of_birth >= "1990-01-01" and students.date_of_birth <= "1990-12-31";
+    ------------------------------------
+    SELECT *, YEAR(students.date_of_birth)
+    FROM students
+    WHERE YEAR(students.date_of_birth) = 1990
 
 ```
 
@@ -30,7 +34,7 @@ Impostiamo una password per l’utente root
 
     SELECT *
     FROM courses
-    WHERE courses.cfu > "10";
+    WHERE courses.cfu > 10;
 
 ```
 
@@ -40,7 +44,11 @@ Impostiamo una password per l’utente root
 
     SELECT *, YEAR(students.date_of_birth)
     FROM students
-    where year(students.date_of_birth) = 1996
+    where year(students.date_of_birth) <= 1996
+    ----------------------------------------------
+    SELECT *, TIMESTAMPDIFF(YEAR,students.date_of_birth, CURDATE())
+    FROM students
+    WHERE TIMESTAMPDIFF(YEAR, students.date_of_birth, CURDATE()) > 30
 
 ```
 
@@ -71,7 +79,7 @@ Impostiamo una password per l’utente root
 
 ### 6. Selezionare tutti i corsi di laurea magistrale (38)
 
-```sql
+```sqlD
 
     SELECT *
     FROM  degrees
@@ -91,7 +99,7 @@ Impostiamo una password per l’utente root
 
 ### 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 
-```sql
+```sqlD
 
     SELECT *
     FROM teachers
