@@ -79,12 +79,15 @@ Impostiamo una password per l’utente root
 
 ### 6. Selezionare tutti i corsi di laurea magistrale (38)
 
-```sqlD
+```sql
 
     SELECT *
     FROM  degrees
     WHERE degrees.name LIKE "Corso di Laurea Magistrale%"
-
+    --------------------------------------------------
+    SELECT *
+    FROM degrees
+    WHERE degrees.level = "magistrale"
 
 ```
 
