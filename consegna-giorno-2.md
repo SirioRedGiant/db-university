@@ -73,6 +73,11 @@ Impostiamo una password per l’utente root
 
 ```sql
 
+    SELECT *
+    FROM  degrees
+    WHERE degrees.name LIKE "Corso di Laurea Magistrale%"
+
+
 ```
 
 ### 7. Da quanti dipartimenti è composta l'università? (12)
