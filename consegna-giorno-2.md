@@ -102,10 +102,16 @@ Impostiamo una password per l’utente root
 
 ### 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 
-```sqlD
+#### LA CORRETTA è LA SECONDA VERSIONE
+
+```sql
 
     SELECT *
     FROM teachers
     WHERE teachers.phone is null
+    --------------------------------
+    SELECT COUNT(*)
+    FROM teachers
+    WHERE teachers.phone IS NULL
 
 ```
