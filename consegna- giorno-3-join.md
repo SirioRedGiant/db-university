@@ -4,6 +4,11 @@
 
 ```sql
 
+    SELECT *
+    FROM `db-university`.`students`
+    INNER JOIN `db-university`.`degrees`
+    ON  degrees.id = `students`.`degree_id`
+    WHERE degrees.name = "Corso di Laurea in Economia"
 
 ```
 
@@ -11,6 +16,11 @@
 
 ```sql
 
+    SELECT *
+    FROM `db-university`.departments
+    INNER JOIN `db-university`.degrees
+    ON departments.ID = degrees.department_id
+    WHERE departments.name = "Dipartimento di Neuroscienze" AND degrees.LEVEL = "magistrale"
 
 ```
 
