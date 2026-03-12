@@ -7,13 +7,21 @@
     FROM `students`
     GROUP BY YEAR(`enrolment_date`)
     ORDER BY YEAR(`enrolment_date`) DESC;
+    -----------------------------------------
+    SELECT YEAR(`enrolment_date`) AS `enrolment_year`, COUNT(*) AS `students_count`
+    FROM `students`
+    GROUP BY `enrolment_year`
+    ORDER BY `enrolment_year` DESC;
 
 ```
 
 ### 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 
 ```sql
-
+    SELECT COUNT(*)
+    FROM teachers
+    GROUP BY teachers.office_address
+    ORDER BY teachers.office_address DESC
 
 ```
 
