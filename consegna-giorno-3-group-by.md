@@ -29,6 +29,9 @@
 
 ```sql
 
+    SELECT exam_student.student_id,AVG(exam_student.vote)
+    FROM exam_student
+    GROUP BY exam_student.student_id
 
 ```
 
