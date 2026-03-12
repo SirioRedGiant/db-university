@@ -36,3 +36,11 @@
 ```
 
 ### 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
+
+```sql
+
+    SELECT degrees.department_id, COUNT(*)
+    FROM degrees
+    GROUP BY degrees.department_id
+
+```
