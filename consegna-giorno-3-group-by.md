@@ -3,7 +3,10 @@
 ### 1. Contare quanti iscritti ci sono stati ogni anno
 
 ```sql
-
+    SELECT YEAR(`enrolment_date`), COUNT(*) AS `students_count`
+    FROM `students`
+    GROUP BY YEAR(`enrolment_date`)
+    ORDER BY YEAR(`enrolment_date`) DESC;
 
 ```
 
