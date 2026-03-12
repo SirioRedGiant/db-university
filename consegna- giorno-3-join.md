@@ -51,6 +51,14 @@ where teachers.name = "Fulvio" and teachers.surname = "Amato"
 
 ```sql
 
+    SELECT *
+    FROM students
+    INNER JOIN degrees
+    ON students.degree_id = degrees.id
+
+    INNER JOIN departments
+    ON  departments.id = degrees.department_id
+    ORDER BY students.surname ASC, students.name ASC
 
 ```
 
