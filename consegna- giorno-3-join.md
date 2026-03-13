@@ -120,3 +120,13 @@ where teachers.name = "Fulvio" and teachers.surname = "Amato"
             GROUP BY student_id, exam_id
             HAVING `highest_score_achieved` >= 18;
 ```
+
+# NOTA
+
+##### GROUP BY student_id, exam_id: per isolare ogni singolo esame tentato di ogni studente.
+
+##### COUNT(\*): quante volte lo studente si è presentato ad ogni esame
+
+##### MAX(`vote`): il voto più alto fra tutti i tentativi fatti per ogni esame da ogni studente.
+
+##### HAVING --> È il "WHERE" delle aggregazioni. Siccome highest_score_achieved è il risultato della funzione (MAX), non può essere filtrato nel WHERE, ma bisogna usare HAVING dopo il raggruppamento.
