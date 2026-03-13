@@ -101,3 +101,22 @@ where teachers.name = "Fulvio" and teachers.surname = "Amato"
 ```
 
 ### 7. BONUS: Selezionare per ogni studente il numero di tentativi sostenuti per ogni esame, stampando anche il voto massimo. Successivamente, filtrare i tentativi con voto minimo 18. --> 21880
+
+```sql
+# 1^ Parte
+            SELECT
+            exam_student.*,
+            COUNT(*) AS `tries_attempt`,
+            MAX(`vote`) AS `highest_score_achieved`
+            FROM exam_student
+            GROUP BY student_id, exam_id
+
+# 2^ Parte
+            SELECT
+            exam_student.*,
+            COUNT(*) AS `tries_attempt`,
+            MAX(`vote`) AS `highest_score_achieved`
+            FROM exam_student
+            GROUP BY student_id, exam_id
+            HAVING `highest_score_achieved` >= 18;
+```
